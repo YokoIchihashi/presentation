@@ -1,20 +1,6 @@
 'use strict'
 // 1行目に記載している 'use strict' は削除しないでください
 
-// ＜html表示＞
-let i = 0;
-let addCode = () => {
-  let theCode = document.getElementById("thanks");
-  if (i >= morseCode2.length) {
-    i = 0;
-  }
-    theCode.append(morseCode2[i]);
-  i++;
-};
-  window.addEventListener("load", () => {
-  window.setInterval(addCode, 100);
-});
-
 const morseCode2 = [
   ".-",
   ".- .",
@@ -79,4 +65,16 @@ const morseCode2 = [
 ]
 
   
-
+// ＜html表示＞
+let i = 0;                                          // カウンターを設定
+let addCode = () => {                               // addCodeの定義 ↓の7行を関数addCodeで定義
+  let theCode = document.getElementById("thanks");  // htmlファイルのidの"thanks"を取得し、変数theCodeとする
+  if (i >= morseCode2.length) {                     // カウンターがモールス信号の長さより大きくなったら
+    i = 0;                                          // カウンターリセット
+  }
+    theCode.append(morseCode2[i]);                  // htmlファイルのid"thanks"にモールス信号を追加していく
+  i++;                                              // カウントアップ
+};
+  window.addEventListener("load", () => {           // 100msecのイベントを登録
+  window.setInterval(addCode, 100);                 // 100msecごとにaddCodeを実行
+});
