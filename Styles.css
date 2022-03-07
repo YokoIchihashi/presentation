@@ -1,0 +1,23 @@
+.box {
+  margin: 2em 0;
+  background: #dcefff;
+}
+.box .box-title {
+  font-size: x-large;
+  background: #5fb3f5;
+  padding: 10px;
+  text-align: center;
+  color: #FFF;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+
+}
+.box p {
+  font-size: 25px;
+  text-align: center;  
+  padding: 3px 20px;
+  margin: 0;
+}
+#thanks {
+  font-size: 20px;
+}
